@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASEAN TRAVEL HUB</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+<header>
+    <h1>ASEAN Travel Hub Admin</h1>
+</header>
+
+<!-- Tab Navigation  -->
+<nav class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('destinations')">🗺️ Destinations</button>
+    <button class="tab-btn" onclick="switchTab('reviews')">⭐ Reviews</button>
+</nav>
+
+<!-- Form for create a destination-->
+<div id="tab-destinations" class="tab-content">
+<section class="create-section">
+    <h2>Add New Destination</h2>
+    <form id="new-destination-form">
+        <input type="text" id="new-name" placeholder="Name (Bali)" required>
+        <input type="text" id="new-country" placeholder="Country (Indonesia)" required>
+        <textarea id="new-desc" placeholder="Description..." rows="3"></textarea>
+        <button id="ai-btn" onclick="generateWithAI()">Generate with AI (description)</button>
+
+        <button type="submit">Add Destination</button>
+    </form>
+</section>
+</div>
+
+<main id="app">
+    <div class="loader">Loading...</div>
+</main>
+
+<!-- Tab Reviews -->
+<div id="tab-reviews" class="tab-content" style="display:none">
+    <section class="create-section">
+        <h2>⭐ All Reviews</h2>
+    </section>
+    <main id="reviews-app">
+        <div class="loader">Loading reviews...</div>
+    </main>
+</div>
+
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
