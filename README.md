@@ -29,7 +29,7 @@ ASEAN Travel Hub Admin is a lightweight frontend application for managing travel
 | File Storage | Supabase Storage |
 | AI Functions | Supabase Edge Functions |
 | Package Manager | npm |
-
+| Testing | Vitest |
 ---
 
 ## 🚀 Getting Started
